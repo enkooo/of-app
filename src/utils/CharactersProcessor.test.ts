@@ -1,6 +1,6 @@
-import { describe, test, expect } from 'vitest';
-import { getTopCharacters } from './CharactersProcessor';
-import { Character } from '../../lib/rick-and-morty-api-client';
+import { describe, test, expect } from 'vitest'
+import { getTopCharacters } from './CharactersProcessor'
+import { Character } from '../../lib/rick-and-morty-api-client'
 
 const characters: Character[] = [
   {
@@ -43,17 +43,17 @@ const characters: Character[] = [
     url: 'https://rickandmortyapi.com/api/character/2',
     created: new Date('2017-11-04T18:50:21.651Z'),
   },
-];
+]
 
 describe('CharactersProcessor', () => {
   test('should return empty array', () => {
-    const topCharacters = getTopCharacters([], 2);
-    expect(topCharacters.length).toBe(0);
-  });
+    const topCharacters = getTopCharacters([], 2)
+    expect(topCharacters.length).toBe(0)
+  })
 
   test('should return two characters', () => {
-    const topCharacters = getTopCharacters(characters, 1);
-    expect(topCharacters.length).toBe(1);
-    expect(topCharacters[0].name).toBe('Rick Sanchez');
-  });
-});
+    const topCharacters = getTopCharacters(characters, 1)
+    expect(topCharacters.length).toBe(1)
+    expect(topCharacters[0].name).toBe('Rick Sanchez')
+  })
+})
