@@ -56,5 +56,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `Preview the changes at ${DEPLOY_URL}`
+              body: `🔍 Preview URL: ${DEPLOY_URL}`
             });
