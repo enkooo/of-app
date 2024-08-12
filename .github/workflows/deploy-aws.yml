@@ -34,3 +34,6 @@ jobs:
 
       - name: Deploy to AWS
         run: aws s3 sync dist s3://ofe-rickandmorty
+
+      - name: Invalidate CloudFront cache
+        run: aws cloudfront create-invalidation --distribution-id distribution_ID --paths "/*"
